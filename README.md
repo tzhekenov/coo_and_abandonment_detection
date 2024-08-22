@@ -13,7 +13,7 @@ This repository contains the code and tools developed as part of master's thesis
 Links for reference repository. GDrive large files link
 
 <a href="https://github.com/mikel-brostrom/yolov8_tracking/actions/workflows/ci.yml"><img src="https://github.com/mikel-brostrom/yolov8_tracking/actions/workflows/ci.yml/badge.svg" alt="CI CPU testing"></a>
-  <a href="https://pepy.tech/project/boxmot"><img src="https://static.pepy.tech/badge/boxmot"></a>
+  <a href="https://drive.google.com/drive/folders/1UjbycA1CWhxjyZgymmXtaLXKN8wRph3f?usp=sharing"><img src="https://static.pepy.tech/badge/boxmot"></a>
   <br>
 
 
@@ -72,6 +72,9 @@ To get started with the code in this repository, follow these steps:
 
 3. **Run Scripts**:
     Each script in this repository can be run individually, depending on your specific task. Detailed instructions for each script are provided in the sections below.
+    
+3. **Get data**:
+    Get data file from the download link (downloads icon before abstract).
 
 ## Scripts Overview
 
@@ -185,6 +188,8 @@ ________________________________________
 A.5 Getting subset of the COCO dataset
 Purpose: Extracts a subset of images and corresponding annotations from the COCO dataset based on specified object classes (e.g., handbags, backpacks, suitcases).
 
+**Command**:
+```python
 
 import os
 import json
@@ -222,9 +227,14 @@ for img_id in img_ids:
     annotation_path = os.path.join(annotations_dir, f"{img_info['file_name'].split('.')[0]}.json")
     with open(annotation_path, 'w') as f:
         json.dump(anns, f)
-________________________________________
+ ```
+
 A.6 Label Remapping Tool
 Purpose: Re-maps class IDs in annotation files to new IDs, ensuring consistency across different datasets, when merging. 
+
+
+**Command**:
+```python
 import os
 
 # Paths to your first dataset
@@ -244,11 +254,15 @@ for filename in os.listdir(first_dataset_labels_path):
                     new_labels.append(' '.join(parts))
         with open(label_file_path, 'w') as f:
             f.write('\n'.join(new_labels))
+ ```
+
 ________________________________________
 A.7 Label Verification Script
 Purpose: Scans the dataset to verify the integrity of annotation files, ensuring all bounding boxes are within the image boundaries.
 
 
+**Command**:
+```python
 import os
 import cv2
 
@@ -292,11 +306,15 @@ with open(log_file_path, 'w') as log_file:
     for key, dataset_path in dataset_paths.items():
         log_file.write(f"Scanning {key} dataset...\n")
         scan_dataset(dataset_path, log_file)
+ ```
 ________________________________________
 A.8 Frame Visualization Tool
 Purpose: Visualizes bounding boxes from YOLO annotations on the corresponding image frames for verification purposes.
 
 
+
+**Command**:
+```python
 import cv2
 import matplotlib.pyplot as plt
 
@@ -332,10 +350,14 @@ for bbox in annotations:
 
 plt.axis('off')
 plt.show()
+ ```
 ________________________________________
 A.9 Zone Drawing on Video
 Purpose: Interactively draws and saves polygonal zones on video frames, which can be used for subsequent analysis, such as time spent within certain areas.
 
+
+**Command**:
+```python
 
 import argparse
 import json
@@ -430,10 +452,14 @@ if __name__ == "__main__":
     parser.add_argument("--zone_configuration_path", type=str, required=True, help="Path where the polygon annotations will be saved as a JSON file.")
     arguments = parser.parse_args()
     main(source_path=arguments.source_path, zone_configuration_path=arguments.zone_configuration_path)
+ ```
 ________________________________________
 A.10 Abandonment and Ownership Detection
 Purpose: Detects the abandonment of objects (e.g., bags) by their owners within predefined zones in video sequences.
 
+
+**Command**:
+```python
 
 import cv2
 import numpy as np
@@ -598,11 +624,14 @@ with open('framewise_detections.json', 'w') as f:
 for obj_class, count in object_counter.items():
     label = 'Person' if obj_class == 0 else 'Handbag' if obj_class == 1 else 'Backpack'
     print(f'{label}: {count} times entered the zone, total time spent: {time_spent[obj_class]} seconds')
+ ```
 ________________________________________
 A.11 Frame Extractor Tool
 Purpose: Extracts specific frames from a video based on a given range, saving them as a separate video file.
 
 
+**Command**:
+```python
 import cv2
 
 def extract_frames(input_video_path, output_video_path, start_frame, end_frame):
@@ -636,3 +665,4 @@ end_frame = 400
 
 extract_frames(input_video_path, output_video_path, start_frame, end_frame)
 
+ ```

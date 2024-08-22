@@ -1,6 +1,30 @@
 # Thesis Project Repository
 
-This repository contains the code and tools developed as part of my master's thesis. The thesis focuses on multi-object detection, tracking, and re-identification using state-of-the-art methodologies, built upon the BoxMOT framework. Below is an overview of the code and scripts included in this repository.
+
+
+This repository contains the code and tools developed as part of master's thesis. The thesis focuses on multi-object detection, tracking, and re-identification using state-of-the-art methodologies, built upon the BoxMOT framework. Below is an overview of the code and scripts included in this repository.
+
+<div align="center">
+  <p>
+  <img src="/workspaces/coo_and_abandonment_detection/assets/output.gif" width="400"/>
+  </p>
+  <br>
+  <div>
+Links for reference repository. GDrive large files link
+
+<a href="https://github.com/mikel-brostrom/yolov8_tracking/actions/workflows/ci.yml"><img src="https://github.com/mikel-brostrom/yolov8_tracking/actions/workflows/ci.yml/badge.svg" alt="CI CPU testing"></a>
+  <a href="https://pepy.tech/project/boxmot"><img src="https://static.pepy.tech/badge/boxmot"></a>
+  <br>
+
+
+  </div>
+</div>
+
+## Abstract
+This thesis focuses on enhancing railway safety and efficiency by improving the detection and management of security threats from unattended luggage. Given the high volume of daily passengers, accurately tracking and linking passengers with their belongings is crucial for preventing incidents and ensuring smooth operations. The research explores the challenges of developing and scaling a machine vision system for railway surveillance, highlighting various scenarios and system limitations.
+
+The proposed solution leverages a comprehensive machine vision approach, utilizing advanced object detection (YOLO), re-identification models (OSNet), and tracking algorithms (OC-SORT) to accurately detect, track, and link passengers with their luggage. A spatio-temporal approach is developed for ownership assignment and abandonment detection, effectively flagging potential security threats, such as when passengers exit without their belongings. This research not only addresses current challenges but also proposes directions for future system improvements.
+
 
 <video src="/workspaces/coo_and_abandonment_detection/assets/output.gif" autoplay loop muted playsinline>
 </video>
@@ -70,23 +94,16 @@ python tracking/track.py \
     --verbose
  ```
 
-### A.1 Main Pipeline for Detection and Tracking with Re-Identification
-
-This script initiates the detection, tracking, and re-identification of objects (persons, suitcases, backpacks, handbags) within a video sequence using specified models.
-
-**Command**:
-
-
 ### A.2 Main Pipeline for Evaluating models 
-Purpose: This script provides MOTA and IDF1 metrics for tracking problems
+Purpose: Custom made scrip provides MOTA and IDF1 metrics for tracking problems
 **Command**:
 ```bash
 python tracking/eval.py 
  ```
 
 
-Purpose: This is an alternative script which evaluates the detection, tracking, and re-identification of objects
-Methods for validating the model performance were taken from the BoxMot repository (Broström, 2023):
+Purpose: This is an alternative script which can help evalute different MOT benchmarks.
+Methods for validating the model performance here are taken from the BoxMot repository (Broström, 2023):
 
 **Command**:
 ```bash

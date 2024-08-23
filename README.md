@@ -56,25 +56,28 @@ This repository contains a series of scripts and tools developed during my maste
 ## Setup and Installation
 
 To get started with the code in this repository, follow these steps:
-
-1. **Clone the Repository**:
+    
+1. **Get data**:
+    Get data file from the download link (downloads icon before abstract).
+    
+    <span style="font-size: 24px; font-weight: bold;">Video data available from -> </span> 
+      <a href="https://drive.google.com/drive/folders/1UjbycA1CWhxjyZgymmXtaLXKN8wRph3f?usp=sharing"><img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Google_Drive_icon_%282020%29.svg"  width="30" height="30"></a> 
+2. **Clone the Repository**:
     ```bash
     git clone https://github.com/mikel-brostrom/boxmot.git
     cd boxmot
     ```
 
-2. **Install Dependencies**:
+3. **Install Dependencies**:
     ```bash
     pip install poetry
     poetry install --with yolo
     poetry shell
     ```
 
-3. **Run Scripts**:
+4. **Run Scripts**:
     Each script in this repository can be run individually, depending on your specific task. Detailed instructions for each script are provided in the sections below.
-    
-3. **Get data**:
-    Get data file from the download link (downloads icon before abstract).
+
 
 ## Scripts Overview
 

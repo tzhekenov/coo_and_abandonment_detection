@@ -6,7 +6,7 @@ This repository contains the code and tools developed as part of master's thesis
 
 <div align="center">
    <p>
-    <img src="https://github.com/tzhekenov/coo_and_abandonment_detection/blob/dev/assets/output_comp.gif?raw=true" width="200px">
+    <img src="https://github.com/tzhekenov/coo_and_abandonment_detection/blob/dev/assets/output_comp.gif?raw=true" width="400px">
   </p>
   <br>
   <div>

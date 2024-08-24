@@ -5,8 +5,8 @@
 This repository contains the code and tools developed as part of master's thesis. The thesis focuses on multi-object detection, tracking, and re-identification using state-of-the-art methodologies, built upon the BoxMOT framework. Below is an overview of the code and scripts included in this repository.
 
 <div align="center">
-  <p>
-  <img src="/workspaces/coo_and_abandonment_detection/assets/output_comp.gif" width="100px">
+   <p>
+    <img src="https://github.com/tzhekenov/coo_and_abandonment_detection/blob/dev/assets/output_comp.gif?raw=true" width="200px">
   </p>
   <br>
   <div>

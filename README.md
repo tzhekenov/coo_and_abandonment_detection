@@ -6,7 +6,7 @@ This repository contains the code and tools developed as part of master's thesis
 
 <div align="center">
   <p>
-  <img src="/workspaces/coo_and_abandonment_detection/assets/output.gif" width="400"/>
+  <img src="/workspaces/coo_and_abandonment_detection/assets/output.gif?raw=true" width="300px">
   </p>
   <br>
   <div>

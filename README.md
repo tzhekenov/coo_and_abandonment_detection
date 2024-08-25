@@ -71,6 +71,7 @@ The proposed solution leverages a comprehensive machine vision approach, utilizi
 ## Introduction
 
 This repository contains a series of scripts and tools developed during my master's thesis, focusing on the detection, tracking, and re-identification of objects in video sequences. The project leverages the BoxMOT framework, a robust collection of state-of-the-art trackers integrated with various detection models, providing a flexible and powerful platform for multi-object tracking tasks.
+Note that the spatio-temporal labeling tool should be incorporated as a function which will work with YOLO outputs. Currently, it can work with either YOLO outputs or annotations in manual mode (directories must be assigned.)
 
 ## Setup and Installation
 

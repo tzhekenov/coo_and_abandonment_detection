@@ -26,8 +26,27 @@ This thesis focuses on enhancing railway safety and efficiency by improving the 
 The proposed solution leverages a comprehensive machine vision approach, utilizing advanced object detection (YOLO), re-identification models (OSNet), and tracking algorithms (OC-SORT) to accurately detect, track, and link passengers with their luggage. A spatio-temporal approach is developed for ownership assignment and abandonment detection, effectively flagging potential security threats, such as when passengers exit without their belongings. This research not only addresses current challenges but also proposes directions for future system improvements.
 
 
-<video src="/workspaces/coo_and_abandonment_detection/assets/output.gif" autoplay loop muted playsinline>
-</video>
+## Project Structure
+
+| Folder / File           | Description                                                              |
+|-------------------------|--------------------------------------------------------------------------|
+| `annotations/`          | Contains zip files with datasets for different scenarios of abandonment. Annotations correspond to videos available in Google Drive link. However, some videos were not uploaded for privacy reasons|
+| `assets/`               | Contains media assets such as GIFs used in the project.                  |
+| `data/`                 | Contains ground truth data for evaluation on Benchmark case.                               |
+| `eval/`                 | Contains scripts  related to model evaluation (MOTA, IDF1).                            |
+| `utils/`                | Utility scripts and notebooks for data processing and model training.    |
+| `weights_finetuned/`    | Directory containing finetuned model weights.                            |
+| `README.md`             | This file, documenting the project and its structure.                    |
+
+## Annotations Folder Content
+
+| Image Preview | Filename                                              | Description                                                |
+|---------------|-------------------------------------------------------|------------------------------------------------------------|
+| <img src="https://github.com/tzhekenov/coo_and_abandonment_detection/blob/dev/annotations/1_Abandonment.png?raw=true" alt="1_Abandonment.png" width="100"/> | `1_Abandonment.zip`                                    | Dataset for general abandonment detection scenarios.       |
+| <img src="https://github.com/tzhekenov/coo_and_abandonment_detection/blob/dev/annotations/2_Abandonment_zoomed_view.png?raw=true" alt="2_Abandonment_zoomed_view.png" width="100"/> | `2_Abandonment_zoomed_view.zip`                        | Dataset focusing on zoomed views of abandonment scenarios. |
+| <img src="https://github.com/tzhekenov/coo_and_abandonment_detection/blob/dev/annotations/3_Benchmark_case_abandonment.png?raw=true" alt="3_Benchmark_case_abandonment.png" width="100"/> | `3_Benchmark_case_abandonment.zip`                     | Benchmark datasets for testing and comparison.             |
+| <img src="https://github.com/tzhekenov/coo_and_abandonment_detection/blob/dev/annotations/4_Temporary_abandonment_and_abandonment_zoomed.png?raw=true" alt="4_Temporary_abandonment_and_abandonment_zoomed.png" width="100"/> | `4_Temporary_abandonment_and_abandonment_zoomed.zip`   | Temporary abandonment and zoomed views dataset.            |
+
 
 ## Table of Contents
 
@@ -52,6 +71,7 @@ The proposed solution leverages a comprehensive machine vision approach, utilizi
 ## Introduction
 
 This repository contains a series of scripts and tools developed during my master's thesis, focusing on the detection, tracking, and re-identification of objects in video sequences. The project leverages the BoxMOT framework, a robust collection of state-of-the-art trackers integrated with various detection models, providing a flexible and powerful platform for multi-object tracking tasks.
+Note that the spatio-temporal labeling tool should be incorporated as a function which will work with YOLO outputs. Currently, it can work with either YOLO outputs or annotations in manual mode (directories must be assigned.)
 
 ## Setup and Installation
 
@@ -76,7 +96,7 @@ To get started with the code in this repository, follow these steps:
     ```
 
 4. **Run Scripts**:
-    Each script in this repository can be run individually, depending on your specific task. Detailed instructions for each script are provided in the sections below.
+    Each script in this repository can be run individually, depending on your specific task. 
 
 
 ## Scripts Overview

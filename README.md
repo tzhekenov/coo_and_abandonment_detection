@@ -1,4 +1,5 @@
 # Thesis Project Repository
+**Title: A Machine Vision Approach to Identify and Monitor Passengers and Luggage**
 
 
 
@@ -64,9 +65,7 @@ The proposed solution leverages a comprehensive machine vision approach, utilizi
   - [Zone Drawing on Video](#a9-zone-drawing-on-video)
   - [Abandonment and Ownership Detection](#a10-abandonment-and-ownership-detection)
   - [Frame Extractor Tool](#a11-frame-extractor-tool)
-- [BoxMOT Repository](#boxmot-repository)
-- [Contributors](#contributors)
-- [License](#license)
+
 
 ## Introduction
 
@@ -208,7 +207,8 @@ for i in range(5358):
     
  ```
 ________________________________________
-A.5 Getting subset of the COCO dataset
+### A.5 Getting subset of the COCO dataset
+
 Purpose: Extracts a subset of images and corresponding annotations from the COCO dataset based on specified object classes (e.g., handbags, backpacks, suitcases).
 
 **Command**:
@@ -252,7 +252,8 @@ for img_id in img_ids:
         json.dump(anns, f)
  ```
 
-A.6 Label Remapping Tool
+### A.6 Label Remapping Tool
+
 Purpose: Re-maps class IDs in annotation files to new IDs, ensuring consistency across different datasets, when merging. 
 
 
@@ -280,7 +281,8 @@ for filename in os.listdir(first_dataset_labels_path):
  ```
 
 ________________________________________
-A.7 Label Verification Script
+### A.7 Label Verification Script
+
 Purpose: Scans the dataset to verify the integrity of annotation files, ensuring all bounding boxes are within the image boundaries.
 
 
@@ -331,7 +333,8 @@ with open(log_file_path, 'w') as log_file:
         scan_dataset(dataset_path, log_file)
  ```
 ________________________________________
-A.8 Frame Visualization Tool
+### A.8 Frame Visualization Tool
+
 Purpose: Visualizes bounding boxes from YOLO annotations on the corresponding image frames for verification purposes.
 
 
@@ -375,7 +378,8 @@ plt.axis('off')
 plt.show()
  ```
 ________________________________________
-A.9 Zone Drawing on Video
+### A.9 Zone Drawing on Video
+
 Purpose: Interactively draws and saves polygonal zones on video frames, which can be used for subsequent analysis, such as time spent within certain areas.
 
 
@@ -477,7 +481,8 @@ if __name__ == "__main__":
     main(source_path=arguments.source_path, zone_configuration_path=arguments.zone_configuration_path)
  ```
 ________________________________________
-A.10 Abandonment and Ownership Detection
+### A.10 Abandonment and Ownership Detection
+
 Purpose: Detects the abandonment of objects (e.g., bags) by their owners within predefined zones in video sequences.
 
 
@@ -649,7 +654,8 @@ for obj_class, count in object_counter.items():
     print(f'{label}: {count} times entered the zone, total time spent: {time_spent[obj_class]} seconds')
  ```
 ________________________________________
-A.11 Frame Extractor Tool
+### A.11 Frame Extractor Tool
+
 Purpose: Extracts specific frames from a video based on a given range, saving them as a separate video file.
 
 
@@ -689,3 +695,8 @@ end_frame = 400
 extract_frames(input_video_path, output_video_path, start_frame, end_frame)
 
  ```
+
+ ### [BoxMOT Repository](#boxmot-repository)
+
+- [Contributors](#contributors)
+- [License](#license)

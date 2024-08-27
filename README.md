@@ -1,6 +1,6 @@
 # Thesis Project Repository
 **Title: A Machine Vision Approach to Identify and Monitor Passengers and Luggage**
-
+**Repo title: Carried Object Ownership and Abandonment detection **
 
 
 This repository contains the code and tools developed as part of master's thesis. The thesis focuses on multi-object detection, tracking, and re-identification using state-of-the-art methodologies, built upon the BoxMOT framework. Below is an overview of the code and scripts included in this repository.

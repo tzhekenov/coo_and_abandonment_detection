@@ -35,6 +35,7 @@ The proposed solution leverages a comprehensive machine vision approach, utilizi
 | `assets/`               | Contains media assets such as GIFs used in the project.                  |
 | `data/`                 | Contains ground truth data for evaluation on Benchmark case.                               |
 | `eval/`                 | Contains scripts  related to model evaluation (MOTA, IDF1).                            |
+| `track/`                | Scripts processing tracker output for COO & Abd detection.    |
 | `utils/`                | Utility scripts and notebooks for data processing and model training.    |
 | `weights_finetuned/`    | Directory containing finetuned model weights.                            |
 | `README.md`             | This file, documenting the project and its structure.                    |
